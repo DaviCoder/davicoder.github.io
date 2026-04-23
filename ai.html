@@ -1,0 +1,423 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>davi-silva — ai.md</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body data-theme="dark" data-page="ai">
+
+<div class="ide">
+
+  <header class="titlebar">
+    <div class="tb-left">
+      <div class="traffic"><span class="r"></span><span class="y"></span><span class="g"></span></div>
+      <div class="project-badge">
+        <span class="pbx">CV</span>
+        <span>davi-silva</span>
+        <span class="cv">— curriculum</span>
+      </div>
+    </div>
+
+    <div class="tabbar" role="tablist" id="tabbar">
+      <div class="tab" data-tab="about">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        <span>about.md</span>
+      </div>
+      <div class="tab" data-tab="experience">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#60a5fa" stroke-width="2" stroke-linecap="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        <span>experience.tsx</span>
+      </div>
+      <div class="tab" data-tab="education">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+        <span>education.json</span>
+      </div>
+      <div class="tab" data-tab="skills">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        <span>skills.yaml</span>
+      </div>
+      <div class="tab tab-devops" data-tab="devops">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        <span>devops.sh</span>
+        <span class="dot"></span>
+      </div>
+      <div class="tab tab-ai" data-tab="ai">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#ec4899" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"/><path d="M19 15l0.6 2.4L22 18l-2.4 0.6L19 21l-0.6-2.4L16 18l2.4-0.6L19 15z"/></svg>
+        <span>ai.md</span>
+        <span class="dot" style="background:#ec4899"></span>
+      </div>
+      <div class="tab" data-tab="contact-sec">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#4ade80" stroke-width="2" stroke-linecap="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+        <span>contact.ts</span>
+      </div>
+    </div>
+
+    <div class="tb-right">
+      <button class="chip" id="lang-toggle" aria-label="Toggle language">
+        <span id="lang-flag">🇧🇷</span>
+        <span id="lang-label">PT</span>
+      </button>
+      <button class="chip" id="theme-toggle" aria-label="Toggle theme">
+        <svg id="theme-icon" width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+        <span id="theme-label">dark</span>
+      </button>
+      <button class="chip primary" id="dl-cv">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span data-i18n="dl">Run .pdf</span>
+      </button>
+    </div>
+  </header>
+
+  <div class="main">
+
+    <nav class="tool-rail" aria-label="tool windows">
+      <div class="tw on" title="Project">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <span class="tip">Project</span>
+      </div>
+      <div class="tw" title="Structure">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+        <span class="tip">Structure</span>
+      </div>
+      <div class="tw" title="Commit">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="4"/><line x1="1.05" y1="12" x2="7" y2="12"/><line x1="17.01" y1="12" x2="22.96" y2="12"/></svg>
+        <span class="tip">Commit</span>
+      </div>
+      <div class="tw" title="Pull Requests">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="18" cy="18" r="3"/><circle cx="6" cy="6" r="3"/><path d="M13 6h3a2 2 0 0 1 2 2v7"/><line x1="6" y1="9" x2="6" y2="21"/></svg>
+        <span class="tip">Pull Requests</span>
+      </div>
+      <div class="spacer"></div>
+      <div class="tw" title="Run">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+        <span class="tip">Run</span>
+      </div>
+      <div class="tw" title="Terminal">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg>
+        <span class="tip">Terminal</span>
+      </div>
+      <div class="tw" title="Problems">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+        <span class="tip">Problems</span>
+      </div>
+    </nav>
+
+    <aside class="sidebar">
+      <div class="sb-head">
+        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+        <span>Project</span>
+        <span class="dots">⋯</span>
+      </div>
+      <div class="sb-body">
+        <div class="sb-section"><span class="caret">▾</span><span>davi-silva</span></div>
+        <div class="sb-item" data-goto="about">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span>
+          <span data-i18n="nav.about">about.md</span>
+        </div>
+        <div class="sb-item" data-goto="experience">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg></span>
+          <span data-i18n="nav.exp">experience.tsx</span>
+        </div>
+        <div class="sb-item" data-goto="education">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg></span>
+          <span data-i18n="nav.edu">education.json</span>
+        </div>
+        <div class="sb-item" data-goto="skills">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></span>
+          <span data-i18n="nav.skills">skills.yaml</span>
+        </div>
+        <div class="sb-item" data-goto="devops">
+          <span class="ico" style="color:#4ade80"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></span>
+          <span>devops.sh</span>
+          <span style="margin-left:auto; font-size:9px; color:#4ade80; border:1px solid #4ade80; border-radius:3px; padding:1px 5px; opacity:0.7">focus</span>
+        </div>
+        <div class="sb-item" data-goto="ai">
+          <span class="ico" style="color:#ec4899"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L13.8 8.2L20 10L13.8 11.8L12 18L10.2 11.8L4 10L10.2 8.2L12 2Z"/></svg></span>
+          <span>ai.md</span>
+          <span style="margin-left:auto; font-size:9px; color:#ec4899; border:1px solid #ec4899; border-radius:3px; padding:1px 5px; opacity:0.7">new</span>
+        </div>
+        <div class="sb-item" data-goto="contact-sec">
+          <span class="ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></span>
+          <span data-i18n="nav.contact">contact.ts</span>
+        </div>
+
+        <div class="sb-section" style="margin-top: 20px;"><span class="caret">▾</span><span data-i18n="outline.h">outline</span></div>
+        <div class="sb-item" style="padding-left: 28px; color: var(--text-dim); cursor: default;"><span data-i18n="outline.exp">5 yrs experience</span></div>
+        <div class="sb-item" style="padding-left: 28px; color: var(--text-dim); cursor: default;"><span data-i18n="outline.open">open to offers</span></div>
+      </div>
+    </aside>
+
+    <main class="editor">
+      <div class="editor-breadcrumb">
+        <div class="crumb-left">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+          <span>curriculum</span>
+          <span class="sep">›</span>
+          <span>src</span>
+          <span class="sep">›</span>
+          <span class="cur">ai.md</span>
+        </div>
+        <div class="crumb-right">
+          <span class="mini-chip"><span class="dot-g"></span>main</span>
+          <span class="mini-chip">UTF-8</span>
+          <span class="mini-chip">LF</span>
+        </div>
+      </div>
+
+      <div class="editor-body">
+        <div class="code">
+
+          <section class="section in" id="ai">
+            <div class="sec-head">
+              <h2><span class="hash" style="color:#ec4899">#</span> <span data-i18n="sec.ai">ai · how I actually use it</span></h2>
+              <span class="tag" style="color:#ec4899">// ai.md</span>
+            </div>
+
+            <div class="ai-hero">
+              <div class="ai-hero-top">
+                <span class="ai-badge"><span class="blip"></span> <span data-i18n="ai.badge">LLMs in the loop</span></span>
+                <span>// davi@laptop — daily driver: Claude + Cursor</span>
+              </div>
+              <div>
+                <h3 data-i18n="ai.h3">IA é <span class="hl">ferramenta</span>, não substituto. Uso como um par sênior que nunca dorme — revisando código, escrevendo testes e acelerando o tedioso.</h3>
+                <p data-i18n="ai.p">Minha filosofia: delegar o que é repetitivo, pedir segunda opinião no que é crítico, e <b>sempre</b> revisar antes de commitar. O diff final é meu.</p>
+              </div>
+              <div class="ai-stats">
+                <div class="ai-stat"><div class="v">~40%</div><div class="l" data-i18n="ai.s1">faster on boilerplate</div></div>
+                <div class="ai-stat"><div class="v">100%</div><div class="l" data-i18n="ai.s2">human-reviewed diffs</div></div>
+                <div class="ai-stat"><div class="v">4+</div><div class="l" data-i18n="ai.s3">LLMs in rotation</div></div>
+                <div class="ai-stat"><div class="v">0</div><div class="l" data-i18n="ai.s4">secrets in prompts</div></div>
+              </div>
+            </div>
+
+            <div class="ai-chat">
+              <div class="ai-chat-head">
+                <div class="traffic">
+                  <span style="background:#ff5f57"></span>
+                  <span style="background:#febc2e"></span>
+                  <span style="background:#28c840"></span>
+                </div>
+                <div class="t-title">~/platform/k8s — ai pair session</div>
+                <div class="model"><span class="d"></span> claude-sonnet</div>
+              </div>
+              <div class="ai-chat-body">
+                <div class="ai-msg">
+                  <div class="ai-avatar me">DS</div>
+                  <div class="ai-bubble">
+                    <div class="role"><span class="me">davi</span> · 14:32</div>
+                    <div class="txt">this helm chart has a readiness probe hitting <span class="cmt-inline">/healthz</span> but pods take ~45s to warm up. writing a bad initial rollout. suggest a fix that works for both staging (2 replicas) and prod (8).</div>
+                  </div>
+                </div>
+                <div class="ai-msg">
+                  <div class="ai-avatar bot">AI</div>
+                  <div class="ai-bubble">
+                    <div class="role"><span class="bot">claude</span> · thinking ⋯ then:</div>
+                    <div class="txt">Add a <span class="cmt-inline">startupProbe</span> so readiness doesn't trip during warmup. Keep failureThreshold generous for prod's cold cache:</div>
+<pre><span class="c"># values.yaml</span>
+<span class="k">probes</span>:
+  <span class="k">startupProbe</span>:
+    <span class="k">httpGet</span>: { <span class="k">path</span>: <span class="s">/healthz</span>, <span class="k">port</span>: <span class="n">8080</span> }
+    <span class="k">failureThreshold</span>: <span class="n">30</span>   <span class="c"># 30 × 2s = 60s window</span>
+    <span class="k">periodSeconds</span>: <span class="n">2</span>
+  <span class="k">readinessProbe</span>:
+    <span class="k">httpGet</span>: { <span class="k">path</span>: <span class="s">/ready</span>, <span class="k">port</span>: <span class="n">8080</span> }
+    <span class="k">periodSeconds</span>: <span class="n">5</span>
+<span class="c"># deployment.yaml — use rollingUpdate with maxSurge for prod</span>
+<span class="k">strategy</span>:
+  <span class="k">type</span>: <span class="a">RollingUpdate</span>
+  <span class="k">rollingUpdate</span>: { <span class="k">maxSurge</span>: <span class="s">"25%"</span>, <span class="k">maxUnavailable</span>: <span class="n">0</span> }</pre>
+                  </div>
+                </div>
+                <div class="ai-msg">
+                  <div class="ai-avatar me">DS</div>
+                  <div class="ai-bubble">
+                    <div class="role"><span class="me">davi</span> · 14:34</div>
+                    <div class="txt">good. <span class="cmt-inline">/ready</span> doesn't exist yet — let's add it. checks DB pool + redis. write the handler in Go.</div>
+                  </div>
+                </div>
+                <div class="ai-msg">
+                  <div class="ai-avatar bot">AI</div>
+                  <div class="ai-bubble">
+                    <div class="role"><span class="bot">claude</span> · 14:34</div>
+                    <div class="ai-typing"><span></span><span></span><span></span></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="ai-stack-head">
+              <span class="hash">##</span> <span data-i18n="ai.work.h">onde a IA entra no meu fluxo</span>
+              <span class="tag">// use-cases</span>
+            </div>
+            <div class="ai-work">
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                <h4 data-i18n="ai.w1.t">Code review pré-PR</h4>
+                <div class="p" data-i18n="ai.w1.p">Colo o diff no Claude antes de abrir PR. Ele pega edge-cases, nullability e padrões que meu cérebro às 18h já perdeu.</div>
+                <div class="tags"><span>diff review</span><span>edge-cases</span><span>nits</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg></div>
+                <h4 data-i18n="ai.w2.t">Testes & fixtures</h4>
+                <div class="p" data-i18n="ai.w2.p">"Gera table-driven tests para essa função, cobrindo inputs vazios, limites e unicode." Revejo, ajusto, committo.</div>
+                <div class="tags"><span>unit</span><span>integration</span><span>property-based</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="12" cy="12" r="3"/><path d="M12 1v6M12 17v6M4.2 4.2l4.3 4.3M15.5 15.5l4.3 4.3M1 12h6M17 12h6M4.2 19.8l4.3-4.3M15.5 8.5l4.3-4.3"/></svg></div>
+                <h4 data-i18n="ai.w3.t">IaC & YAML hell</h4>
+                <div class="p" data-i18n="ai.w3.p">Terraform, Helm, k8s manifests. IA é excelente pra traduzir intent em sintaxe correta. Eu valido, faço plan e aplico.</div>
+                <div class="tags"><span>terraform</span><span>helm</span><span>kustomize</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
+                <h4 data-i18n="ai.w4.t">Debug de stack trace</h4>
+                <div class="p" data-i18n="ai.w4.p">Colo um erro obscuro + contexto mínimo. Claude aponta causa provável, sugere métricas pra olhar e filtro de logs.</div>
+                <div class="tags"><span>root-cause</span><span>grep tips</span><span>logs</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg></div>
+                <h4 data-i18n="ai.w5.t">Docs & ADRs</h4>
+                <div class="p" data-i18n="ai.w5.p">Rascunho READMEs, runbooks e ADRs com IA. Entrego bullets, ela vira prosa; eu polio o tom e os detalhes técnicos.</div>
+                <div class="tags"><span>runbooks</span><span>ADR</span><span>changelog</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 3v18"/></svg></div>
+                <h4 data-i18n="ai.w6.t">Rubber-duck arquitetural</h4>
+                <div class="p" data-i18n="ai.w6.p">Descrevo o problema, peço 3 abordagens com trade-offs. Serve como sparring antes de discutir com o time.</div>
+                <div class="tags"><span>trade-offs</span><span>design docs</span><span>what-if</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><polyline points="4 17 10 11 4 5"/><line x1="12" y1="19" x2="20" y2="19"/></svg></div>
+                <h4 data-i18n="ai.w7.t">Shell & one-liners</h4>
+                <div class="p" data-i18n="ai.w7.p">"awk pra somar coluna 3 de um tsv, agrupando por coluna 1". O tipo de comando que eu só escreveria 1x ao ano.</div>
+                <div class="tags"><span>awk</span><span>jq</span><span>bash</span></div>
+              </div>
+              <div class="ai-flow">
+                <div class="ico"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg></div>
+                <h4 data-i18n="ai.w8.t">Refactor de bloco grande</h4>
+                <div class="p" data-i18n="ai.w8.p">Função de 300 linhas com 4 responsabilidades? Peço split sugerido e testes antes do refactor. Então executo passo a passo.</div>
+                <div class="tags"><span>split</span><span>rename</span><span>extract</span></div>
+              </div>
+            </div>
+
+            <div class="ai-stack-head">
+              <span class="hash">##</span> <span data-i18n="ai.stack.h">stack de IA que uso</span>
+              <span class="tag">// daily · weekly</span>
+            </div>
+            <div class="ai-stack">
+              <div class="ai-tool">
+                <div class="logo" style="background: linear-gradient(135deg, #D97757, #c2410c);">C</div>
+                <div class="lbl"><div class="n">Claude</div><div class="s">pair programming · long-context review</div></div>
+                <span class="freq daily">daily</span>
+              </div>
+              <div class="ai-tool">
+                <div class="logo" style="background: linear-gradient(135deg, #0f172a, #334155);">Cu</div>
+                <div class="lbl"><div class="n">Cursor</div><div class="s">IDE agents · inline edits</div></div>
+                <span class="freq daily">daily</span>
+              </div>
+              <div class="ai-tool">
+                <div class="logo" style="background: linear-gradient(135deg, #111, #27272a);">Co</div>
+                <div class="lbl"><div class="n">GitHub Copilot</div><div class="s">autocomplete · boilerplate</div></div>
+                <span class="freq daily">daily</span>
+              </div>
+              <div class="ai-tool">
+                <div class="logo" style="background: linear-gradient(135deg, #10a37f, #059669);">G</div>
+                <div class="lbl"><div class="n">ChatGPT</div><div class="s">research · side tasks</div></div>
+                <span class="freq">weekly</span>
+              </div>
+              <div class="ai-tool">
+                <div class="logo" style="background: linear-gradient(135deg, #6366f1, #4338ca);">O</div>
+                <div class="lbl"><div class="n">Ollama (local)</div><div class="s">offline · dados sensíveis</div></div>
+                <span class="freq">weekly</span>
+              </div>
+              <div class="ai-tool">
+                <div class="logo" style="background: linear-gradient(135deg, #ec4899, #be185d);">P</div>
+                <div class="lbl"><div class="n">Perplexity</div><div class="s">pesquisa técnica com citação</div></div>
+                <span class="freq">weekly</span>
+              </div>
+            </div>
+
+            <div class="ai-stack-head">
+              <span class="hash">##</span> <span data-i18n="ai.rules.h">como eu uso IA com responsabilidade</span>
+              <span class="tag">// non-negotiables</span>
+            </div>
+            <div class="ai-rules">
+              <div class="ai-rule">
+                <div class="chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="t"><b data-i18n="ai.r1.b">Nunca segredos no prompt.</b> <span data-i18n="ai.r1.t">Tokens, chaves e PII ficam fora. Uso placeholders e restrinjo escopo.</span></div>
+              </div>
+              <div class="ai-rule">
+                <div class="chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="t"><b data-i18n="ai.r2.b">Sempre revisar o diff.</b> <span data-i18n="ai.r2.t">Nada chega ao main sem ser lido linha por linha. IA não assume PRs no meu lugar.</span></div>
+              </div>
+              <div class="ai-rule">
+                <div class="chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="t"><b data-i18n="ai.r3.b">Testes são meu detector de mentira.</b> <span data-i18n="ai.r3.t">Se passa nos testes (meus, não os da IA), eu confio. Se não, pergunto de novo.</span></div>
+              </div>
+              <div class="ai-rule">
+                <div class="chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="t"><b data-i18n="ai.r4.b">Contexto &gt; prompt bonito.</b> <span data-i18n="ai.r4.t">Colar arquivos reais, schema e erro exato vale mais que engenharia de prompt.</span></div>
+              </div>
+              <div class="ai-rule">
+                <div class="chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="t"><b data-i18n="ai.r5.b">Dados sensíveis ficam locais.</b> <span data-i18n="ai.r5.t">Código proprietário ou cliente sensível? LLM local (Ollama) ou nada.</span></div>
+              </div>
+              <div class="ai-rule">
+                <div class="chk"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+                <div class="t"><b data-i18n="ai.r6.b">Fundamentals vêm primeiro.</b> <span data-i18n="ai.r6.t">IA acelera quem sabe o que está fazendo. Não pulo estudos porque "a IA resolve".</span></div>
+              </div>
+            </div>
+          </section>
+
+        </div>
+
+        <div class="page-nav" id="page-nav">
+          <a id="page-prev" aria-label="Previous page" class="disabled">
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="15 18 9 12 15 6"/></svg>
+            <span data-i18n="page.prev">anterior</span>
+          </a>
+          <span class="counter" id="page-counter"><span class="cur-n">1</span> / 8</span>
+          <a id="page-next" aria-label="Next page">
+            <span data-i18n="page.next">próximo</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"><polyline points="9 18 15 12 9 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <nav class="right-rail" aria-label="right tool windows">
+      <div class="tw" title="Database"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg><span class="tip">Database</span></div>
+      <div class="tw" title="Build"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg><span class="tip">Build</span></div>
+      <div class="tw" title="Notifications"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg><span class="tip">Notifications</span></div>
+      <div class="tw" title="AI Assistant"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 2L13.09 8.26L19 7L14.74 12L19 17L13.09 15.74L12 22L10.91 15.74L5 17L9.26 12L5 7L10.91 8.26L12 2Z"/></svg><span class="tip">AI Assistant</span></div>
+    </nav>
+  </div>
+
+  <footer class="statusbar">
+    <span><span class="pulse"></span><span data-i18n="sb.live">live</span></span>
+    <span class="sep">|</span>
+    <span>main</span>
+    <span class="sep">|</span>
+    <span>UTF-8</span>
+    <span class="sep">|</span>
+    <span>LF</span>
+    <div class="right">
+      <span data-i18n="sb.ln">Ln 1, Col 1</span>
+      <span>·</span>
+      <span>TypeScript React</span>
+      <span>·</span>
+      <span>𝛘 v1.0.4</span>
+    </div>
+  </footer>
+
+</div>
+
+<div class="toast" id="toast">✓ copiado para clipboard</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
